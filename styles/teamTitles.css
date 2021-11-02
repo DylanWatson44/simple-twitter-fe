@@ -1,0 +1,17 @@
+.team-title {
+    position: absolute;
+    top: 8%;
+    width: 20%;
+    font-size: 4vh;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+}
+
+.red-team.team-title {
+    left: 10%;
+}
+
+.blue-team.team-title {
+    left: 70%;
+}

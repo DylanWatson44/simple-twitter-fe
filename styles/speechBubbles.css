@@ -1,0 +1,120 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.message-holder {
+    position: absolute;
+    top: 40%;
+    width: 20%;
+    max-height: 20vh;
+}
+#blue-team-message-holder {
+    left: 70%;
+}
+#red-team-message-holder {
+    left: 12%;
+}
+
+.imessage {
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    font-family: "SanFrancisco";
+    font-size: 1.1vw;
+    margin: 0 auto 1rem;
+    max-width: 600px;
+    padding: 0.5rem 1.5rem;
+}
+
+.imessage p {
+    border-radius: 1.15rem;
+    line-height: 1.25;
+    max-width: 75%;
+    padding: 1.4rem 1.4rem;
+    position: relative;
+    word-wrap: break-word;
+}
+
+.imessage p::before,
+.imessage p::after {
+    bottom: -0.1rem;
+    content: "";
+    height: 1rem;
+    position: absolute;
+}
+
+p[class^="from-"] {
+    margin: 0.5rem 0;
+    width: fit-content;
+}
+
+p.red-team {
+    align-items: flex-start;
+    background-color: #e5e5ea;
+    color: #000;
+}
+
+p.red-team:before {
+    border-bottom-right-radius: 0.8rem 0.7rem;
+    border-left: 1rem solid #e5e5ea;
+    left: -0.35rem;
+    transform: translate(0, -0.1rem);
+}
+
+p.red-team::after {
+    background-color: #073642;
+    border-bottom-right-radius: 0.5rem;
+    left: 20px;
+    transform: translate(-30px, -2px);
+    width: 10px;
+}
+
+p.red-team img {
+    left: -22.5%;
+    top: 95%;
+    border-radius: 0.5rem;
+
+    position: absolute;
+}
+
+p.blue-team {
+    align-self: flex-end;
+    background-color: #e5e5ea;
+    color: #000;
+}
+
+p.blue-team::before {
+    border-bottom-left-radius: 0.8rem 0.7rem;
+    border-right: 1rem solid #e5e5ea;
+    right: -0.35rem;
+    transform: translate(0, -0.1rem);
+}
+
+p.blue-team::after {
+    background-color: #073642;
+    border-bottom-left-radius: 0.5rem;
+    right: -40px;
+    transform: translate(-30px, -2px);
+    width: 10px;
+}
+
+p.blue-team img {
+    /* transform: translate(280px, 40px); */
+    right: -22.5%;
+    top: 95%;
+    border-radius: 0.5rem;
+
+    position: absolute;
+}
+
+/* general styling */
+@font-face {
+    font-family: "SanFrancisco";
+    src: url("https://cdn.rawgit.com/AllThingsSmitty/fonts/25983b71/SanFrancisco/sanfranciscodisplay-regular-webfont.woff2")
+            format("woff2"),
+        url("https://cdn.rawgit.com/AllThingsSmitty/fonts/25983b71/SanFrancisco/sanfranciscodisplay-regular-webfont.woff")
+            format("woff");
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Twitter FE</title>
+        <link rel="stylesheet" href="styles/speechBubbles.css" />
+        <link rel="stylesheet" href="styles/teamTitles.css" />
+    </head>
+    <body style="margin: 0; display: flex">
+        <canvas id="canvas"></canvas>
+        <script src="scripts/canvas.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script type="module" src="scripts/speech-bubbles.js"></script>
+        <script src="scripts/submit-team-change.js"></script>
+        <script src="scripts/force-tag.js"></script>
+
+        <input
+            oninput="forceTag(this)"
+            value="#RedTeam"
+            class="red-team team-title"
+        />
+
+        <input
+            oninput="forceTag(this)"
+            value="#BlueTeam"
+            class="blue-team team-title"
+        />
+
+        <div class="message-holder" id="red-team-message-holder">
+            <div class="imessage">
+                <p class="red-team">
+                    <b>Welcome to Red VS Blue!</b><br />
+
+                    <img
+                        src="assets/cloudIcon.svg" width="75" height="75"
+                    />
+                </p>
+            </div>
+        </div>
+
+        <div class="message-holder" id="blue-team-message-holder">
+            <div class="imessage">
+                <p class="blue-team">
+                    <b>To start, input a hashtag in each of the fields above to pull live tweets for that tag</b>
+                    <img
+                        src="assets/cloudIcon.svg" width="75" height="75"
+                    />
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
