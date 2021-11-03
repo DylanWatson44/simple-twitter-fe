@@ -22,11 +22,16 @@ window.addEventListener("load", (event) => {
             });
             if (isRedTweet) {
                 redTweet.dispatchEvent(
-                    new CustomEvent("text-change", formatBubble(json))
+                    new CustomEvent("text-change", {
+                        detail: formatBubble(json),
+                    })
                 );
-                //redTweet.innerHTML = formatBubble(json);
             } else {
-                blueTweet.innerHTML = formatBubble(json);
+                blueTweet.dispatchEvent(
+                    new CustomEvent("text-change", {
+                        detail: formatBubble(json),
+                    })
+                );
             }
         }
     });
@@ -36,9 +41,9 @@ window.addEventListener("load", (event) => {
     });
 });
 
-function changeBubbleText(text) {
-    console.log("changeing bubble")
-    this.innerHTML = text;
+function changeBubbleText(event) {
+    console.log("changeing bubble");
+    this.innerHTML = event.detail;
 }
 
 function formatBubble(tweetData) {
